@@ -1,0 +1,14 @@
+{
+    "require": {
+        "timber/timber": "^1.18",
+        "freshmail/rest-api": "3.0"
+    },
+    "require-dev": {
+        "kint-php/kint": "^4.1"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    }
+}
