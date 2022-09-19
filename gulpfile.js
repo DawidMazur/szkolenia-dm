@@ -34,8 +34,6 @@ let dirs = {
 
     src: {
         css: [
-            // colors
-            'src/css/colors.css',
             'src/css/settings.css',
 
             // tailwind utilities
@@ -129,10 +127,6 @@ const compileAll = async () => {
     convJs(dirs.src.js.global, 'global-functions-js.js');
     let endtime = Date.now();
     console.log('End compiling js in: ' + ((endtime - time) / 1000) + ' s')
-
-    // const colors = await loadColors()
-
-    // saveColors(colors)
 
     await Async(tailwindCSS());
 
