@@ -3,7 +3,11 @@
 {% block content %}
     {% embed "views/layouts/quide_layout.twig" %}
         {% block content %}
-            <h1 class="text-40 mb-30">
+            {% include "views/components/breadcrumbs/breadcrumbs.twig" with {
+                breadcrumbs_list: breadcrumbs_list
+            } only %}
+
+            <h1 class="text-40 mb-20">
                 {{ post.post_title }}
             </h1>
 

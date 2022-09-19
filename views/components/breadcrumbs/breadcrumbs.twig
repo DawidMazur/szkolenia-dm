@@ -1,0 +1,21 @@
+<nav aria-label="breadcrumbs" class="breadcrumbs text-20  mb-20 ">
+	<ol class="flex items-center gap-10">
+		{% for item in breadcrumbs_list %}
+			<li class=" flex items-center gap-10  ">
+				{% if item.current %}
+					<span class="font-400">{{ item.title }}</span>
+				{% else %}
+					<a href="{{ item.url }}" class=" font-600  ">
+						{{ item.title }}
+					</a>
+				{% endif %}
+
+				{% if not loop.last %}
+				<span aria-hidden="true" class="breadcrumbs-separator">
+					{{ separator ?: '/' }}
+				</span>
+				{% endif %}
+			</li>
+		{% endfor %}
+	</ol>
+</nav>

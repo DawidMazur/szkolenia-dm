@@ -25,7 +25,7 @@ function pc_timber_add_acf_to_context( $context ) {
     }
 
     // if breadcrumbs needed
-    // $context['breadcrumbs_list'] = pc_breadcrumbs_list();
+    $context['breadcrumbs_list'] = pc_breadcrumbs_list();
 
     return $context;
 }
@@ -47,10 +47,11 @@ function pc_breadcrumbs_list() {
     $list = [];
 
     // homepage
-    $list[] = [
-        'url' => home_url(),
-        'title' => pll__('Strona główna'),
-    ];
+    // jeśli zawsze zaczynasz od home page to możesz to dodać:
+    // $list[] = [
+    //     'url' => home_url(),
+    //     'title' => pll__('Strona główna'),
+    // ];
 
     // archive
 
@@ -107,6 +108,17 @@ function pc_breadcrumbs_list() {
     }
 
     if(is_singular( )) {
+        $parents = get_post_ancestors( get_the_ID() );
+        if( ! empty($parents) ) {
+            $parents = array_reverse($parents);
+            foreach($parents as $page) { 
+                $list[] = [
+                    'title' => get_the_title($page),
+                    'url' => get_the_permalink($page),
+                ];
+            }
+        }
+        
         // current page
         $list[] = [
             'title' => get_the_title(),
