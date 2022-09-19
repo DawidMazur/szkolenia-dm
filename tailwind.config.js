@@ -96,15 +96,6 @@ module.exports = {
     container: false,
   },
   theme: {
-    colors: {
-      white: '#fff',
-      black: '#000',
-      transparent: 'transparent',
-      current: 'currentColor',
-      // add colors here,
-      primary: 'blue',
-    },
-
     screens: {
       'sm': '360px',
       'md': '600px',
@@ -210,6 +201,15 @@ module.exports = {
     }),
 
     extend: {
+      colors: {
+        white: '#fff',
+        black: '#000',
+        transparent: 'transparent',
+        current: 'currentColor',
+        // add colors here,
+        primary: 'blue',
+      },
+
       zIndex: {
         '-2': '-2',
         '-1': '-1',

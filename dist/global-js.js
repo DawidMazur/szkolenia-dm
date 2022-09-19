@@ -1,0 +1,1 @@
+"use strict";console.log("jakis js dla strony quide");

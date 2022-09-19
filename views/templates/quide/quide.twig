@@ -1,5 +1,15 @@
 {% extends "core/base.twig" %}
 
 {% block content %}
-    
+    {% embed "views/layouts/quide_layout.twig" %}
+        {% block content %}
+            <h1 class="text-40 mb-30">
+                {{ post.post_title }}
+            </h1>
+
+            {% include "views/components/flexible/flexible-content-wrapper.twig" with {
+                content: acf.content,
+            } %}
+        {% endblock %}
+    {% endembed %}
 {% endblock %}

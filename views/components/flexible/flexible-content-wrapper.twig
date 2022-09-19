@@ -1,0 +1,10 @@
+<div class="w-full flex flex-col gap-40">
+	{% set render = true %}
+	{% for item in content %}
+		{% if render %}
+			{% include "components/flexible/parts/" ~ item.acf_fc_layout ~ "/" ~ item.acf_fc_layout ~ ".twig" with {
+				item: item,
+			} %}
+		{% endif %}
+	{% endfor %}
+</div>

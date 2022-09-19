@@ -18,29 +18,14 @@
 	}
 
 	body {
-		@apply text-18 font-300 bg-black text-white leading-[1.66] ;
-
-		font-family: 'Barlow', sans-serif;
+		@apply text-16 font-400 leading-[1.66] ;
 		scroll-behavior: smooth;
 
-		letter-spacing: 0.1em;
-
-
-		@media screen and (max-width: 991px) {
-			@apply overflow-hidden;
-		}
+		font-family: 'Montserrat', sans-serif;
 	}
 
 	a, button {
 		@apply transition-all;
-	}
-
-	.font-barlow {
-		font-family: 'Barlow', sans-serif;
-	}
-	
-	.font-dm {
-		font-family: 'DM Serif Display', serif;
 	}
 
 	.max-w-grid {
@@ -71,23 +56,23 @@
 		margin-top: unset!important;
 	}
 
-	ol {
-		counter-reset: oool;
+	// ol {
+	// 	counter-reset: oool;
 
-		> li {
-			@apply mb-30 mt-0 pl-25 relative;
+	// 	> li {
+	// 		@apply mb-30 mt-0 pl-25 relative;
 
-			&::before {
-				counter-increment: oool;
-				content: counter(oool, decimal-leading-zero) '. ';
-				@apply text-18 font-300 block absolute -left-10 ;
-			}
+	// 		&::before {
+	// 			counter-increment: oool;
+	// 			content: counter(oool, decimal-leading-zero) '. ';
+	// 			@apply text-18 font-300 block absolute -left-10 ;
+	// 		}
 
-			&::marker {
-				@apply text-black;
-			}
-		}
-	}
+	// 		&::marker {
+	// 			@apply text-black;
+	// 		}
+	// 	}
+	// }
 
 	ul {
 		@apply list-none !pl-45;
@@ -125,34 +110,8 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'DM Serif Display', serif;
-	letter-spacing: 0.05em;
+	@apply font-700;
 }
-
-.img-wrapper {
-	@apply relative;
-
-	&:before {
-		content: '';
-		@apply absolute top-0 right-[10%] h-8 -translate-y-8 w-[40%] bg-primary transition-all duration-1000 ;
-	}
-
-	&:after {
-		content: '';
-		@apply absolute bottom-0 left-[10%] h-8 translate-y-8 w-[50%] bg-primary transition-all duration-1000 ;
-	}
-
-	&:hover {
-		&:before {
-			@apply w-[70%];
-		}
-
-		&:after {
-			@apply w-[60%];
-		}
-	}
-}
-
 
 input, textarea {
 	@apply !rounded-0;

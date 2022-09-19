@@ -1,0 +1,29 @@
+<div class="w-full flex min-h-[calc(100vh-10rem)] flex-col lg:flex-row-reverse">
+    <div class="w-full p-20">
+        {% block content %}
+            {# Tutaj jakiś content który powinien zostać nadpisany #}
+        {% endblock %}
+    </div>
+
+    {% block aside %}
+    <aside class="w-full max-w-300 lg:min-w-300 bg-sky-700 text-white p-20 ">
+        <h2 class="text-32">
+            Menu: 
+        </h2>
+
+        {% include "views/components/menu/menu-list.twig" with {
+            menu: menu.header,
+            classes: {
+                main: ' w-full ',
+                list: ' w-full flex flex-col ',
+
+                item: {
+                    li: ' text-20 font-600 ',
+                }
+            }
+        } %}
+
+
+    </aside>
+    {% endblock %}
+</div>

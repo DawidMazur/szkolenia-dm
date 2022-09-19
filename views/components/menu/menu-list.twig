@@ -1,0 +1,24 @@
+{% if menu %}
+<nav class="menu-list {{ classes.main }}">
+    <ul class="menu-list__list {{ classes.list }}">
+        {% for item in menu.items %}
+            <li class="menu-list__item {{ item.classes|join(' ') }} {{ classes.item.li }}">
+                <a class="menu-list__link {{ classes.item.link }}" href="{{ item.link }}" target="{{ item.target ? item.target : '_self' }}">
+                    {{ item.title }}
+                </a>
+                {% if item.children and not hide_submenu %}
+                    <ul class="menu-list-submenu {{ classes.submenu.main }}">
+                        {% for child in item.children %}
+                            <li class="menu-list-submenu__item {{ child.classes|join(' ') }}" {{ classes.submenu.item }}>
+                                <a href="{{ child.link }}">
+                                    {{ child.title }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</nav>
+{% endif %}
