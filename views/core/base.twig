@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html {{ function('language_attributes') }}>
+<head>
+	<meta charset="{{ site.charset }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>{{ site.name }}</title>
+	<meta name="description" content="{{ site.description }}">
+
+    {{ function('wp_head') }}
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="preconnect" href="//fonts.googleapis.com/" crossorigin>
+	<link rel="preconnect" href="//unpkg.com/" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com/">
+	<link rel="dns-prefetch" href="//polyfill.io/">
+	<link rel="dns-prefetch" href="//unpkg.com/">
+
+		{% if localhost or acf_global.dev  %}
+			<script>
+				document.write('<script src="http://' + (
+location.host || 'localhost'
+).split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+			</script>
+		{% endif %}
+
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <div id="top" aria-hidden="true"></div>
+
+    {% include "core/header/header_content.twig" %}
+
+    {% block content %}{% endblock %}
+
+    {% include "core/footer/footer.twig" %}
+</body>
+</html>

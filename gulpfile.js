@@ -154,7 +154,7 @@ const tailwindCSS = () => {
 
             this.emit('end');
         })
-        .pipe(concat('global-style-' + banner.version + '.css'))
+        .pipe(concat('global-style.css'))
         .pipe(csso({
             sourceMap: false,
             debug: false
