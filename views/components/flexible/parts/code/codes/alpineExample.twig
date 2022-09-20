@@ -1,0 +1,20 @@
+<div class="w-full" x-data="{ count: 0 }">
+    <button @click="count++" class="button">
+        Kliknij by zwiększyć liczbę:
+        <span x-text="count"></span>
+    </button>
+</div>
+
+<div class="w-full mt-30" x-data="exampleForm">
+    <div class="w-full flex gap-20">
+        <input type="text" x-model="name" placeholder="Szukaj posta" class="border border-gray-800 bg-gray-300 block p-10">
+
+        <button @click="submit" :disabled="loading" class="button">
+            Szukaj
+        </button>
+    </div>
+
+    <div class="w-full mt-20" x-html="html">
+
+    </div>
+</div>

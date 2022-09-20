@@ -1,1 +1,1 @@
-"use strict";console.log("jakis js dla strony quide");
+"use strict";console.log("jakis js dla strony quide"),document.addEventListener("alpine:init",function(){Alpine.data("exampleForm",function(){return{name:"",loading:!1,html:"",submit:function(){this.loading=!0,this.html="Ładuję: "+this.name}}})});

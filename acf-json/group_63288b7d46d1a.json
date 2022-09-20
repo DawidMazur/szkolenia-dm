@@ -1,0 +1,131 @@
+{
+    "key": "group_63288b7d46d1a",
+    "title": "Quide",
+    "fields": [
+        {
+            "key": "field_63288b8b3e109",
+            "label": "Treść",
+            "name": "content",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_63288b92b2473": {
+                    "key": "layout_63288b92b2473",
+                    "name": "text",
+                    "label": "Tekst",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_63288b983e10a",
+                            "label": "Tekst",
+                            "name": "text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6328b9ca75b93": {
+                    "key": "layout_6328b9ca75b93",
+                    "name": "code",
+                    "label": "Custom kod plik",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6328b9d375b94",
+                            "label": "Nazwa pliku",
+                            "name": "code",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_632a095982514": {
+                    "key": "layout_632a095982514",
+                    "name": "pure_code",
+                    "label": "Custom kod",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_632a095982515",
+                            "label": "Kod",
+                            "name": "code",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Dodaj wiersz",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-quide.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1663699306
+}

@@ -1,0 +1,19 @@
+{% extends "core/base.twig" %}
+
+{% block content %}
+    {% embed "views/layouts/quide_layout.twig" %}
+        {% block content %}
+            {% include "views/components/breadcrumbs/breadcrumbs.twig" with {
+                breadcrumbs_list: breadcrumbs_list
+            } only %}
+
+            <h1 class="text-40 mb-20">
+                {{ post.post_title }}
+            </h1>
+
+            <div class="w-full bg-red-600 p-20">
+                
+            </div>
+        {% endblock %}
+    {% endembed %}
+{% endblock %}

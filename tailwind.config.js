@@ -78,6 +78,8 @@ function genFontSize(radio) {
   return r;
 }
 
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   mode: 'jit',
   content: [
@@ -96,6 +98,22 @@ module.exports = {
     container: false,
   },
   theme: {
+    colors: {
+      white: '#fff',
+      black: '#000',
+      transparent: 'transparent',
+      current: 'currentColor',
+      // add colors here,
+      primary: 'blue',
+      gray: colors.gray,
+      emerald: colors.emerald,
+      indigo: colors.indigo,
+      yellow: colors.yellow,
+      red: colors.red,
+      blue: colors.blue,
+      sky: colors.sky,
+    },
+
     screens: {
       'sm': '360px',
       'md': '600px',
@@ -201,15 +219,6 @@ module.exports = {
     }),
 
     extend: {
-      colors: {
-        white: '#fff',
-        black: '#000',
-        transparent: 'transparent',
-        current: 'currentColor',
-        // add colors here,
-        primary: 'blue',
-      },
-
       zIndex: {
         '-2': '-2',
         '-1': '-1',

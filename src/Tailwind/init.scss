@@ -56,26 +56,9 @@
 		margin-top: unset!important;
 	}
 
-	// ol {
-	// 	counter-reset: oool;
-
-	// 	> li {
-	// 		@apply mb-30 mt-0 pl-25 relative;
-
-	// 		&::before {
-	// 			counter-increment: oool;
-	// 			content: counter(oool, decimal-leading-zero) '. ';
-	// 			@apply text-18 font-300 block absolute -left-10 ;
-	// 		}
-
-	// 		&::marker {
-	// 			@apply text-black;
-	// 		}
-	// 	}
-	// }
-
 	iframe { 
 		width: 100%;
+		max-width: 100%;
 	}
 
 	ul {
