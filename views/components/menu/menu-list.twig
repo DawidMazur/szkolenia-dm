@@ -3,14 +3,14 @@
     <ul class="menu-list__list {{ classes.list }}">
         {% for item in menu.items %}
             <li class="menu-list__item {{ item.classes|join(' ') }} {{ classes.item.li }}">
-                <a class="menu-list__link {{ classes.item.link }}" href="{{ item.link }}" target="{{ item.target ? item.target : '_self' }}">
+                <a class="hover:text-blue-300 transition-all menu-list__link {{ classes.item.link }}" href="{{ item.link }}" target="{{ item.target ? item.target : '_self' }}">
                     {{ item.title }}
                 </a>
                 {% if item.children and not hide_submenu %}
                     <ul class="menu-list-submenu {{ classes.submenu.main }}">
                         {% for child in item.children %}
                             <li class="menu-list-submenu__item {{ child.classes|join(' ') }}" {{ classes.submenu.item }}>
-                                <a href="{{ child.link }}">
+                                <a href="{{ child.link }}" class="hover:text-blue-300 transition-all">
                                     {{ child.title }}
                                 </a>
                             </li>
