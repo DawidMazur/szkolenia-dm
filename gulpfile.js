@@ -40,6 +40,9 @@ let dirs = {
             'src/Tailwind/init.scss',
             'src/Tailwind/scss/*.scss',
 
+            //src scss
+            'src/css/code/**/*.scss',
+
             // views scss
             'views/**/*.scss',
             'views/**/*.css',
