@@ -11,8 +11,15 @@
                 {{ post.post_title }}
             </h1>
 
-            <div class="w-full bg-red-600 p-20">
-                
+            <div class="w-full p-20 max-w-840 max-auto">
+                {# {{ d(posts) }} #}
+                <div class="w-full grid gap-10 grid-cols-1 md:grid-cols-2 slap:grid-cols-3">
+                    {% for i in posts %}
+                        {% include "views/components/post-prev/post-prev.twig" with {
+                           post: i
+                        } %}
+                    {% endfor %}
+                </div>
             </div>
         {% endblock %}
     {% endembed %}
