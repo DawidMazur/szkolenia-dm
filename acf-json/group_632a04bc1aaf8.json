@@ -80,6 +80,137 @@
                     "maxlength": ""
                 }
             ]
+        },
+        {
+            "key": "field_632b0cba7b848",
+            "label": "Elastyczne treści",
+            "name": "flex_content",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_632b0cf079786": {
+                    "key": "layout_632b0cf079786",
+                    "name": "block_text",
+                    "label": "Treść",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_632b0cfa7b849",
+                            "label": "Treść",
+                            "name": "text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_632b0d0b7b84a": {
+                    "key": "layout_632b0d0b7b84a",
+                    "name": "block_link",
+                    "label": "Linki",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_632b0d0b7b84b",
+                            "label": "Linki",
+                            "name": "links",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_632b0d2a7b84c",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_632b0d357b84d": {
+                    "key": "layout_632b0d357b84d",
+                    "name": "block_gallery",
+                    "label": "Galeria",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_632b0d357b84e",
+                            "label": "Galeria",
+                            "name": "gallery",
+                            "type": "gallery",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "insert": "append",
+                            "library": "all",
+                            "min": "",
+                            "max": "",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Dodaj wiersz",
+            "min": "",
+            "max": ""
         }
     ],
     "location": [
@@ -100,5 +231,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663760147
+    "modified": 1663765847
 }

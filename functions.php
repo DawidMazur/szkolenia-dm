@@ -89,4 +89,3 @@ acf_add_options_sub_page(array(
     'menu_title'	=> 'Ustawienia stopki',
     'parent_slug'	=> 'global-settings',
 ));
-

@@ -78,5 +78,16 @@ class AjaxEndpoints {
             'message' => $titles,
         ]);
     }
+
+    public static function create_post() {
+        $title = $_POST['data']['title'];
+
+        $post_id = wp_insert_post([
+            'post_title' => $title,
+            'post_type' => 'example_posts',
+        ]);
+
+        update_field('test', $title, $post_id);
+    }
 }
 AjaxEndpoints::init();

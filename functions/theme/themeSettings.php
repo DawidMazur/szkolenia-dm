@@ -35,4 +35,10 @@ function pc_init_theme_custom_post_types() {
 	// ]);
 }
 
+acf_add_options_sub_page(array(
+    'page_title' 	=> 'Ustawienia example posts',
+    'menu_title'	=> 'Ustawienia example posts',
+    'parent_slug'	=> 'edit.php?post_type=example_posts',
+));
+
 add_action('init', 'pc_init_theme_custom_post_types', 0);
