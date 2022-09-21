@@ -3,9 +3,9 @@
 		{% for item in breadcrumbs_list %}
 			<li class=" flex items-center gap-10  ">
 				{% if item.current %}
-					<span class="font-400">{{ item.title }}</span>
+					<span class="font-400 hover:text-blue-600 transition-all">{{ item.title }}</span>
 				{% else %}
-					<a href="{{ item.url }}" class=" font-600  ">
+					<a href="{{ item.url }}" class=" font-600  hover:text-blue-600 transition-all">
 						{{ item.title }}
 					</a>
 				{% endif %}

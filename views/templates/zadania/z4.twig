@@ -1,0 +1,24 @@
+{% extends "core/base.twig" %}
+
+{% block content %}
+	<section class="w-full max-w-1480 px-20 mx-auto pt-100">
+		<div x-data="z4({{acf.loop|length}})" class="w-full flex flex-col">
+			<div class="grid grid-cols-1 md:grid-cols-2 slap:grid-cols-4 border border-gray-400">
+				{% for id, item in acf.loop %}
+					<div x-on:click="change({{id}})" :class="show == {{id}} ? '!bg-blue-800 !text-white' : ''" class="md:border-r md:border-r-gray-400 last:border-r-transparent w-full group hover:bg-blue-800 transition-all border-b border-b-gray-400 border-t border-t-gray-400 first:border-t-transparent">
+						<h2 class="text-18 lg:text-20 font-600 w-full flex px-20 llap:px-40 pt-20 lg:pt-30 llap:pt-50 text-gray group-hover:text-white transition-all pb-20 lg:pb-30 ">
+							{{item.title}}
+						</h2>
+					</div>
+				{% endfor %}
+			</div>
+
+			{% for id, item in acf.loop %}
+				<div x-show="show == {{ id }}" x-transition class="w-full prose text-16 pt-40 mlap:pt-75">
+					{{item.text}}
+				</div>
+                
+			{% endfor %}
+		</div>
+	</section>
+{% endblock %}
