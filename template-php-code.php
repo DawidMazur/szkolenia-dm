@@ -44,6 +44,9 @@ class ExampleClass {
         return 'example_method <br>';
     }
 
+    /**
+     * Method echo some text
+     */
     public static function static_method() {
         return 'static_method <br>';
     }
