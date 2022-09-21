@@ -15,7 +15,7 @@ register_nav_menus(array(
 
 /*
 * Theme custom posts types
-*/ 
+*/
 function pc_init_theme_custom_post_types() {
 	pc_register_post_type('example_posts', 'Przykładowe posty', 'Przykładowy post', [
 		'supports' => [
@@ -24,8 +24,10 @@ function pc_init_theme_custom_post_types() {
 			'excerpt',
 			'author',
 			// 'thumbnail',
-		]
+		],
+		'has_archive' => true,
 	]);
+
 
 	// pc_register_post_type('realizacja-zdjecia', 'Realizacje Zdjęcia', 'Realizacja Zdjęcie', [
 	// 	'menu_icon' => 'dashicons-format-gallery',
@@ -33,6 +35,12 @@ function pc_init_theme_custom_post_types() {
 	// 		'post_tag'
 	// 	]
 	// ]);
+
+	acf_add_options_sub_page(array(
+    'page_title' 	=> 'Ustawienia example_posts',
+    'menu_title'	=> 'Ustawienia example_posts',
+    'parent_slug'	=> 'edit.php?post_type=example_posts',
+));
 }
 
 add_action('init', 'pc_init_theme_custom_post_types', 0);

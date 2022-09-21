@@ -1,0 +1,13 @@
+{% extends "core/base.twig" %}
+
+{% block content %}
+    <section class="w-full mt-300 mb-200 bg-red-700 min-h-500">
+      <div class="grid gap-50 -translate-y-100 grid-cols-1 lg:grid-cols-3 px-30 lg:px-60 slap:px-100 mlap:px-130 full:px-250 mx-auto">
+      {% for item in posts %}
+        {% include "views/components/post-task/post-task.twig" with {
+          post:item,
+        } %}
+      {% endfor %}
+      </div>
+    </section>
+{% endblock %}

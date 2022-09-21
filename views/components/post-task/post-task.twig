@@ -1,0 +1,30 @@
+<article class="-top-30  cursor-pointer">
+  <a href="{{post.url}}" class="w-full">
+    <img src="{{post.acf.img.url}}" alt="{{post.acf.img.url}}" class="aspect-[16/9] w-full object-cover rounded-tl-20">
+  </a>
+
+  <div class="p-25 group hover:bg-white min-h-300">
+    <div class="flex gap-20 py-20 font-700 text-13">
+      <p class="text-white group-hover:text-red-500">
+        Testowe posty /
+      </p>
+      <time datetime="{{post.post_date}}" class="text-gray-700">
+        {{post.post_date|date('d/m/Y')}}
+      </time>
+    </div>
+
+
+
+    <h2 class="text-25 font-700 text-white mb-30 group-hover:text-black">
+      <a href="{{post.url}}">
+      {{post.post_title}}
+      </a>
+    </h2>
+
+    <p class="txt-15 font-500 text-white group-hover:text-black">
+      {{ post.post_excerpt }}
+    </p>
+  </div>
+
+
+</article>

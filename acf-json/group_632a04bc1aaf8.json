@@ -25,6 +25,25 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_632af5b93f0d8",
+            "label": "Test",
+            "name": "test",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -45,5 +64,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663698126
+    "modified": 1663759820
 }

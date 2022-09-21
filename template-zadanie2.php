@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: CSS/Tailwind
+ * Template Name: zadanie2
  * @package ws
  */
 
@@ -16,4 +16,4 @@ foreach ($context['posts'] ?: [] as $post) {
   $post->url = get_the_permalink($post->ID);
 }
 
-Timber::render('views/templates/tailwind/tailwind.twig', $context);
+Timber::render('views/templates/zadanie2/zadanie2.twig', $context);

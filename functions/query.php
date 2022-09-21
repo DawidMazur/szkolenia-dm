@@ -6,7 +6,7 @@ function pc_pre_query( $query ) {
         if(isset($_GET['posts_per_page'])) {
             $query->set( 'posts_per_page', intval($_GET['posts_per_page']) );
         } else {
-            $query->set( 'posts_per_page', intval(-1) );
+            $query->set( 'posts_per_page', intval(6) );
 
             if( is_post_type_archive('blog') ) {
                 $query->set( 'posts_per_page', intval(9) );
@@ -132,7 +132,7 @@ class PC_Query {
             PC_Query::add_meta_query($query, [
                 'key' => 'price',
                 'value' =>[
-                    $price_min, 
+                    $price_min,
                     $price_max
                 ],
                 'compare' => 'BETWEEN',
