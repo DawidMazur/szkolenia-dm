@@ -31,3 +31,14 @@
 //     ]);
 // }
 
+/* class AjaxEndpoints {
+    public static function add_ajax_endpoint($name){
+        add_action(
+            'wp_ajax_napriv',    
+        );
+    }
+    public static function find_post(){
+
+    }
+
+} */
