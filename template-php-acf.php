@@ -37,3 +37,12 @@ foreach( $get_fields['cos_co_nie_istnieje'] ?: [] as $id => $item ) {
     $text = $item['text'];
     echo $id . ':' . $text . '<br>';
 }
+
+foreach($get_fields['klon']['content'] as $block) {
+    if($block['acf_fc_layout'] == "text") {
+        // jakiś kod dla tekstu
+    }
+    if($block['acf_fc_layout'] == "code") {
+        // jakiś kod dla code
+    }
+}

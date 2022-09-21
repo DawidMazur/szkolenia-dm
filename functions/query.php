@@ -6,7 +6,7 @@ function pc_pre_query( $query ) {
         if(isset($_GET['posts_per_page'])) {
             $query->set( 'posts_per_page', intval($_GET['posts_per_page']) );
         } else {
-            $query->set( 'posts_per_page', intval(-1) );
+            $query->set( 'posts_per_page', intval(6) );
 
             if( is_post_type_archive('blog') ) {
                 $query->set( 'posts_per_page', intval(9) );

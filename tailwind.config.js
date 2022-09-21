@@ -63,6 +63,7 @@ function genFontSize(radio) {
   let ratios = radio ? radio : {
     0: ratioSizeLineHeight,
     40: 1.3,
+    60: 1.2,
   }
   for (let i = 1; i <= 100; i++) {
     if (ratios[i]) {
@@ -122,6 +123,8 @@ module.exports = {
       'mlap': '1356px',
       'llap': '1536px',
       'full': '1920px',
+
+      'smartphone': '360px',
     },
 
     blur: {

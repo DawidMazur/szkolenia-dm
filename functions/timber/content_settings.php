@@ -20,6 +20,10 @@ function pc_timber_add_acf_to_context( $context ) {
         // foreach($context['posts'] as $item) {
         //     do something with $item
         // }
+        foreach($context['posts'] ?: [] as $post) {
+            $post->acf = get_fields( $post->ID );
+            $post->url = get_the_permalink( $post->ID );
+        }
 
         // do something for archive pages
     }
