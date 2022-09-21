@@ -60,6 +60,8 @@ $example_Class = new ExampleClass();
 echo $example_Class->example_method();
 
 
+//! statyczne rzeczy przez :: sie wykonuja
+//! metody przez ->
 
 
 
